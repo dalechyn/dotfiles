@@ -1,0 +1,34 @@
+Consider setting up udev rules.
+
+Normally, users are prohibited to alter files in the sys filesystem. It's
+advisable (and recommended) to setup an "udev" rule to allow users in the
+"video" group to set the display brightness.
+To do so, place a file in /etc/udev/rules.d/90-backlight.rules containing:
+
+SUBSYSTEM=="backlight", ACTION=="add",
+RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness",
+RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
+
+to setup the relevant permissions at boot time. These rules are very
+conservative: only the display brightness can be controlled, and nothing else.
+Do not set suid permissions on xbacklight! Similarly, running
+xbacklight under sudo is pointless (there's simply no reason to).
+Keyboard backlight control is also available on certain laptop models via the
+"leds" subsystem. The following laptop models are known to have a controllable
+keyboard backlight:
+
+Lenovo ThinkPad: -ctrl tpacpi::kbd_backlight
+
+Apple MacBook Pro: -ctrl smc::kbd_backlight
+
+Dell Latitude/XPS: -ctrl dell::kbd_backlight
+
+Asus N-Series Notebooks: -ctrl asus::kbd_backlight
+
+
+The following rules allow users in the video group to set the keyboard
+backlight as well:
+
+SUBSYSTEM=="leds", ACTION=="add", KERNEL=="*::kbd_backlight",
+RUN+="/bin/chgrp video /sys/class/leds/%k/brightness",
+RUN+="/bin/chmod g+w /sys/class/leds/%k/brightness"
