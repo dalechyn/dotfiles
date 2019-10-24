@@ -79,7 +79,7 @@ window#waybar.solo {
 }
 
 #battery.charging {
-	color: rgba(217, 216, 216, 1);
+	color: rgba(0, 216, 0, 1);
 }
 
 #network.wifi {
@@ -87,6 +87,6 @@ window#waybar.solo {
 }
 
 #network.disconnected{
- 	color:orange;
+ 	color: orange;
 }
 
