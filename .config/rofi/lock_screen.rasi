@@ -1,0 +1,40 @@
+configuration {
+    theme:              "config";
+    show-icons:         false;
+    font:               "DejaVu Sans 53";
+}
+
+window {
+    height:                         320; // 1440 - 2*16
+    width:                          320px;
+    location:                       center;
+    anchor:                         center;
+}
+
+mainbox {
+    children:           [message, listview];
+    padding:            20px 100px;
+    background-color: transparent;
+}
+
+textbox {
+    horizontal-align:   0.5;
+    border:             0px 0px 2px;
+    border-color:       @primary;
+    margin:             0px;
+    padding:            0px;
+}
+
+listview {
+    layout:             vertical;
+    columns:            2;
+    spacing:            15px;
+    lines:              1;
+    fixed-height:       1;
+    dynamic:            false;
+}
+
+element-text {
+    horizontal-align:   0.5;
+    font:               "DejaVu Sans 16";
+}

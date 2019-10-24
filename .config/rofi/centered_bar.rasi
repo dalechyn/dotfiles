@@ -1,0 +1,30 @@
+
+configuration {
+    theme:                          "config";
+    window-format:                  "{t}";
+    show-icons:                     true;
+    font:                           "DejaVu Sans 13";
+    columns:                        1;
+}
+
+window {
+    height:                         312; // 1440 - 2*16
+    width:                          380px;
+    location:                       center;
+    anchor:                         center;
+}
+
+mainbox {
+    children:           [message, listview];
+    border:                         2px;
+    border-color:                   @primary;
+    padding:                        40px 20px;
+}
+
+element-icon {
+    size: 32; /* Must be a power of 2 */
+}
+
+element-text {
+    vertical-align: 0.5;
+}

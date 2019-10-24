@@ -1,0 +1,92 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: Hack;
+	font-size: 15px;
+	box-shadow: none;
+	text-shadow: none;
+	transition-duration: 0s;
+	color: rgba(0, 255, 255, 1);
+}
+
+window {
+	font-weight: bold;
+	color: rgba(217, 216, 216, 1);
+	background: rgba(15, 189, 232, 0.2);
+}
+
+window#waybar.solo {
+	font-weight: bold;
+	color: rgba(217, 216, 216, 1);
+	background: rgba(15, 189, 232, 0.2);
+}
+
+#sway-window{
+	border: 1px red solid;
+}
+
+#workspaces {
+	margin: 0 5px;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	color: rgba(217, 216, 216, 0.4);
+}
+
+#workspaces button.visible {
+	color: rgba(217, 216, 216, 1);
+}
+
+#workspaces button.focused {
+	background-color: teal;
+}
+
+#workspaces button.urgent {
+	color: rgba(238, 46, 36, 1);
+}
+
+#mode {
+  border: 1px red solid;
+}
+
+#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight,#clock {
+	margin: 0px 6px 0px 10px;
+	padding: 5px;
+
+	/* border-left: 2px red solid; */
+
+	min-width: 25px;
+}
+
+#clock {
+	margin: 0px 16px 0px 10px;
+	min-width:  10px;
+}
+
+#battery {}
+
+#battery.warning {
+	color: rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+	color: rgba(238, 46, 36, 1);
+}
+
+#battery.good{
+	color: rgba(32,230,14,.8);
+}
+
+#battery.charging {
+	color: rgba(217, 216, 216, 1);
+}
+
+#network.wifi {
+ 	color: rgba(32,230,124,.8);
+}
+
+#network.disconnected{
+ 	color:orange;
+}
+
