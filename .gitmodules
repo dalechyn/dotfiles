@@ -1,0 +1,9 @@
+[submodule ".tmux/plugins/tmux-continuum"]
+	path = .tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum
+[submodule ".tmux/plugins/tmux-tokyo-night"]
+	path = .tmux/plugins/tmux-tokyo-night
+	url = https://github.com/fabioluciano/tmux-tokyo-night.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
