@@ -75,19 +75,19 @@ return {
       local sources = {
 
         -- spell check
-        b.diagnostics.codespell,
-        b.diagnostics.misspell,
+        -- b.diagnostics.misspell,
+        -- b.diagnostics.codespell,
         -- cspell
-        cspell.diagnostics.with({
-          -- Set the severity to HINT for unknown words
-          diagnostics_postprocess = function(diagnostic)
-            diagnostic.severity = vim.diagnostic.severity["HINT"]
-          end,
-          read_config_synchronously = false,
-        }),
-        cspell.code_actions.with({
-          read_config_synchronously = false,
-        }),
+        -- cspell.diagnostics.with({
+        -- Set the severity to HINT for unknown words
+        -- diagnostics_postprocess = function(diagnostic)
+        -- diagnostic.severity = vim.diagnostic.severity["HINT"]
+        -- end,
+        -- read_config_synchronously = false,
+        -- }),
+        -- cspell.code_actions.with({
+        -- read_config_synchronously = false,
+        -- }),
 
         -- tailwind
         b.formatting.rustywind.with({
