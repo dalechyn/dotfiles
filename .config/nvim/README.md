@@ -7,5 +7,6 @@ I don't expect anyone to use it, but feel free to do so if you want.
 
 - [ ] Add a plugin to connect Biome or ESLint server depending on the
      closest config found.
+- [ ] Configure tailwind cmp.
 
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
