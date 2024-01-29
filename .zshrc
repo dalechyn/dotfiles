@@ -202,3 +202,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+# bun completions
+[ -s "/Users/vladyslav/.bun/_bun" ] && source "/Users/vladyslav/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
