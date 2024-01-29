@@ -69,7 +69,6 @@ return {
     },
     event = { "BufReadPre", "BufNewFile" },
     opts = function()
-      local cspell = require("cspell")
       local none_ls = require("null-ls")
       local b = none_ls.builtins
       local sources = {
